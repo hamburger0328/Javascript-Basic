@@ -17,9 +17,9 @@ for (let i = 1; i <= 100; i++) {
 
 // 문제 3. 1부터 50까지 369결과를 프린트하자.
 for (let i = 1; i <= 50; i++) {
-  console.log(i); //1~50
-  let changeString = i.toString();
-  let result = "";
+  // console.log(i); //1~50 확인용
+  let changeString = i.toString(); // i를 문자로 바꿔 준다...
+  let result = ""; // "짝"을 넣을수 있게 result에 빈값을 준다...
 
   for (let j = 0; j < changeString.length; j++) {
     if (
@@ -34,6 +34,11 @@ for (let i = 1; i <= 50; i++) {
 }
 
 // 문제 4. 주어진 숫자가 소수이면 true 아니면 false를 출력하는 프로그램을 짜시오.
-for (let i = 1; i <= 7; i++) {
-  console.log(i);
-}
+// for (let i = 1; i <= 7; i++) {
+//   console.log(i);
+//   if () {
+//     true;
+//   } else {
+//     false;
+//   }
+// }

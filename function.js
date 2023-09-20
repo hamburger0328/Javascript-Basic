@@ -2,20 +2,13 @@
 /* 문제1.
 - "안녕 내 이름은 제시카야"라는 문장을 프린트하는 함수 'greet’를 만드시오
 - 이름을 매개변수로 전달받아 다양한 이름을 프린트 할 수 있게 함수를 수정하시오 예) “안녕 내 이름은 에밀리야”, “안녕 내 이름은 할리야”
-- 매개변수로 전달받은 이름을 반환하게 함수를 수정하시오
+- 매개변수로 전달받은 이름을 반환하게 함수를 수정하시오 <????
 */
 function greet(name) {
-  console.log("안녕 내 이름은 제시카야");
-  if (name == "에밀리") {
-    console.log("안녕 내 이름은 에밀리야");
-  } else if (name == "할리") {
-    console.log("안녕 내 이름은 할리야");
-  }
-
-  return "만나서 반가워";
+  alert("안녕 내 이름은" + name + "야");
 }
-let hi = greet("할리");
-console.log(hi);
+greet("에밀리");
+greet("할리");
 
 /* 문제2.
 - meetAt 함수를 만들어주세요.
@@ -30,14 +23,30 @@ console.log(hi);
 리턴 해주세요.
 */
 
+function meetAt(year, month, day) {
+
+  if () {
+    alert(year + "년");
+  } else if () {
+    alert(year + "년" + month + "월");
+  } else if () {
+    alert(`${year}/${month}/${day}`);
+  }
+}
+meetAt();
+
 /*문제3.
 - findSmallestElement 함수를 구현해 주세요. findSmallestElement 의 arr 인자는 숫자 값으로만 이루어진 배열입니다. arr 의 값들 중 가장 작은 값을 리턴 해주세요. 만일 arr 가 비어있으면 0을 리턴 해주세요. 예를 들어, 다음과 같은 배열이 인자(input)으로 들어왔다면 0이 리턴 되어야 합니다.
 
 이용되는 배열
 [100,200,3,0,2,1]
 */
+function findSmallestElement(year, month, day) {}
+findSmallestElement();
 
 /*문제4.
 - 돈을 매개변수로 받으면 몇개의 지폐와 동전이 필요한지 최소 개수를 계산해주는 함수를 만드시오
 예) 12300인 경우
 */
+function money() {}
+money();
