@@ -118,25 +118,23 @@ console.log(animals.includes("Human")); // false
 console.log(animals.includes("Cat")); // true
 
 // "Red deer"을 "Deer"로 바꾸시오
-console.log(animals.indexOf("Red deer")); // indexOf로 Red deer의 인덱스 확인하기
-animals[77] = "Deer"; // 해당 인덱스에 Deer로 변경
+animals[animals.indexOf("Red deer")] = "Deer"; // 해당 인덱스에 Deer로 변경
 console.log(animals.includes("Red deer")); // 변경되어 사라졌는지 확인
 console.log(animals.includes("Deer")); // 잘 변경되었는지 확인
 
 // "Spider"부터 3개의 아이템을 기존 어레이에서 제거하시오
-console.log(animals.indexOf("Spider")); // Spider가 몇번째에 있는지 확인
-animals.splice(81, 3); // 문제는 "기존 배열"에서 Spider를 기준으로 3개가 제거되어야 함으로 splice를 사용
+animals.splice(animals.indexOf("Spider"), 3); // 문제는 "기존 배열"에서 Spider를 기준으로 3개가 제거되어야 함으로 splice를 사용
 console.log(animals);
 
 // "Tiger"이후의 값을 제거하시오
-console.log(animals.indexOf("Tiger")); // Tiger가 몇번째에 있는지 확인
-animals.slice(84); // slice사용하면 배열의 아이템은 12개가 잘렸다
+animals.slice(animals.indexOf("Tiger")); // slice사용하면 배열의 아이템은 12개가 잘렸다
 console.log(animals); // 하지만 다시 console로 찍어보면 배열은 96으로 변경되지 않는다.
 /* 즉 slice는 기존의 배열을 건드리지 않는다.(새로 생성된 배열!)
 그러나 splice는 배열이 잘리기 때문에 두개의 큰 차이점을 잘 이해하고 사용해야 한다. */
 
 // "B"로 시작되는 아이템인 "Baboon"부터 "Bison"까지 가져와 새로운 어레이에 저장하시오
-console.log(animals.indexOf("Baboon")); // 8번째
-console.log(animals.indexOf("Bison")); // 15번째
-let bAnimals = animals.slice(8, 16);
+let bAnimals = animals.slice(
+  animals.indexOf("Baboon"),
+  animals.indexOf("Bison") + 1
+);
 console.log(bAnimals);

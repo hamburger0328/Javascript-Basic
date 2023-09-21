@@ -5,7 +5,7 @@
 - 매개변수로 전달받은 이름을 반환하게 함수를 수정하시오 <????
 */
 function greet(name) {
-  alert("안녕 내 이름은" + name + "야");
+  console.log(`안녕 내 이름은 ${name}야`);
 }
 greet("에밀리");
 greet("할리");
@@ -23,20 +23,20 @@ greet("할리");
 리턴 해주세요.
 */
 
-function meetAt(year, month, day) {
-  let years = year <= 2023;
-  let months = month <= 12;
-  let days = day <= 31;
-  console.log(years);
-  console.log(months);
-  console.log(days);
+let years = "";
+let months = "";
+let days = "";
 
-  if (years == true) {
-    alert(year + "년");
-  } else if (months == true) {
-    alert(`${year}년${month}월`);
-  } else if (days == true) {
-    alert(`${year}/${month}/${day}`);
+function meetAt(year, month, day) {
+  if (year < 2024 && month <= 12 && days <= 31) {
+    (years = year), (months = month), (days = day);
+    console.log(years, months, days);
+
+    if (days) return `${years}년 ${months}월 ${days}일`;
+    if (months) return `${years}년 ${months}월`;
+    if (years) return `${years}년`;
+  } else {
+    return "안녕";
   }
 }
 meetAt(2023, 12, 19);
@@ -53,15 +53,19 @@ arr 의 값들 중 가장 작은 값을 리턴 해주세요.
 [100,200,3,0,2,1]
 */
 function findSmallestElement(num) {
-  let arr = [100, 200, 3, 0, 2, 1];
-  if (arr) {
+  console.log(num);
+  for (let i = 0; i >= 0; i++) {
+    console.log(i);
   }
 }
-findSmallestElement();
+findSmallestElement([100, 200, 3, 0, 2, 1]);
 
 /*문제4.
 - 돈을 매개변수로 받으면 몇개의 지폐와 동전이 필요한지 최소 개수를 계산해주는 함수를 만드시오
 예) 12300인 경우
 */
-function money(won) {}
-money();
+function money(won) {
+  // 만원1장 천원2장 백원3개
+  // 조건 , 오만원,만원,오천원,천원,오백원,백원,오십원,십원
+}
+money(12300);
