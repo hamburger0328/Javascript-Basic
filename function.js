@@ -41,31 +41,51 @@ function meetAt(year, month, day) {
 }
 meetAt(2023, 12, 19);
 
-/*문제3.
-- findSmallestElement 함수를 구현해 주세요. 
-findSmallestElement 의 arr 인자는 숫자 값으로만 이루어진 배열입니다. 
-arr 의 값들 중 가장 작은 값을 리턴 해주세요. 
-만일 arr 가 비어있으면 0을 리턴 해주세요. 
+/*문제3*/
 
-예를 들어, 다음과 같은 배열이 인자(input)으로 들어왔다면 0이 리턴 되어야 합니다.
+// arr 의 값들 중 가장 작은 값을 리턴 해주세요.
+// 만일 arr 가 비어있으면 0을 리턴 해주세요.
 
-이용되는 배열
-[100,200,3,0,2,1]
-*/
-function findSmallestElement(num) {
-  console.log(num);
-  for (let i = 0; i >= 0; i++) {
-    console.log(i);
+/**
+ * a가 기준
+ * b는 값은 바껴야
+ * 그래서 a기준으로 b를 비교해서 a보다 b가 크면 큰수
+ * 반대로 작으면 작은수
+ * a 작다고 생각했슈 근데 a>b , b>c, c<d, c<e
+ * 이럴때 c를 반환해
+ */
+
+function findSmallestElement(arr) {
+  if (arr.length === 0) return 0;
+
+  let min = arr[0];
+
+  for (i in arr) {
+    if (min > arr[i]) {
+      min = arr[i];
+    }
   }
+  return min;
 }
 findSmallestElement([100, 200, 3, 0, 2, 1]);
 
-/*문제4.
-- 돈을 매개변수로 받으면 몇개의 지폐와 동전이 필요한지 최소 개수를 계산해주는 함수를 만드시오
-예) 12300인 경우
-*/
+/*문제4*/
+// 예) 12300인 경우
+
+// 만원1장 천원2장 백원3개
+
+/**
+ * wonMoney 기준 값
+ * let wonMoney = [50000, 10000, 5000, 1000, 500, 100, 50, 10];
+ * wonMoney 와 won 을 비교해서
+ * wonMoney[i] 배열 값 ->  won 비교를 해
+ * won의 값에 맞게 wonMoney[i]배열 값의 개수나와야 합니다.
+ */
+
 function money(won) {
-  // 만원1장 천원2장 백원3개
-  // 조건 , 오만원,만원,오천원,천원,오백원,백원,오십원,십원
+  let wonMoney = [50000, 10000, 5000, 1000, 500, 100];
+  let newMoney = [];
+  for (i in wonMoney) {
+  }
 }
 money(12300);
