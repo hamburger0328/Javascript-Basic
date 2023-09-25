@@ -80,12 +80,42 @@ findSmallestElement([100, 200, 3, 0, 2, 1]);
  * wonMoney 와 won 을 비교해서
  * wonMoney[i] 배열 값 ->  won 비교를 해
  * won의 값에 맞게 wonMoney[i]배열 값의 개수나와야 합니다.
+ * 배열에다가 push로 나머지값을 넣기?
+ * 아니지,,,
  */
 
 function money(won) {
   let wonMoney = [50000, 10000, 5000, 1000, 500, 100];
   let newMoney = [];
+
   for (i in wonMoney) {
+    // console.log("wonMoney[i]:1", wonMoney[i]);
+
+    let num = Math.floor(won / wonMoney[i]);
+    if (num > 0) {
+      // console.log("num ", num);
+      // console.log("won", won);
+      // console.log("wonMoney[i]:2", wonMoney[i]);
+      newMoney.push(wonMoney[i], num);
+    }
   }
+  // console.log("newMoney3", newMoney);
+  return newMoney;
 }
 money(12300);
+
+// Math.floor정리
+let unit = [50000, 10000, 5000, 1000, 500, 100];
+function changeCalculate(money) {
+  unit.forEach((i) => {
+    console.log("i", i);
+    let num = Math.floor(money / i);
+    // console.log("num", num);
+
+    console.log(i + "X" + num);
+    money -= i * num;
+    console.log("money", money);
+  });
+}
+
+changeCalculate(12300);
